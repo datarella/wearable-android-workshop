@@ -2,19 +2,21 @@
 
 # Connect
 
-mApiClient = new GoogleApiClient.Builder(this).addApi(Wearable.API).addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
- public void onConnected(Bundle bundle) {
-  Log.d(TAG, "ConnectionCallback onConnected");
- }
- public void onConnectionSuspended(int i) {
-  Log.d(TAG, "ConnectionCallback onConnectionSuspended");
- }
-}).addOnConnectionFailedListener(new GoogleApiClient.OnConnectionFailedListener() {
- public void onConnectionFailed(ConnectionResult connectionResult) {
-  Log.d(TAG, "ConnectionCallback onConnectionFailed");
- }
-}).build();
-mApiClient.connect();
+void openConnection() {
+  mApiClient = new GoogleApiClient.Builder(this).addApi(Wearable.API).addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
+   public void onConnected(Bundle bundle) {
+    Log.d(TAG, "ConnectionCallback onConnected");
+   }
+   public void onConnectionSuspended(int i) {
+    Log.d(TAG, "ConnectionCallback onConnectionSuspended");
+   }
+  }).addOnConnectionFailedListener(new GoogleApiClient.OnConnectionFailedListener() {
+   public void onConnectionFailed(ConnectionResult connectionResult) {
+    Log.d(TAG, "ConnectionCallback onConnectionFailed");
+   }
+  }).build();
+  mApiClient.connect();
+}
 
 
 # Find available nodes and send a message
