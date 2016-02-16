@@ -37,10 +37,10 @@ void sendMessage() {
 
 # Execute in non-UI thread
 
-this.executorService = Executors.newCachedThreadPool();
-this.executorService.execute(new Runnable() {
-  public void run() {
-     sendMessage();
+this.executorService = Executors.newCachedThreadPool();
+this.executorService.execute(new Runnable() {
+  public void run() {
+     sendMessage();
   }
 });
 
@@ -49,8 +49,8 @@ this.executorService.execute(new Runnable() {
 
 Wearable.MessageApi.addListener(mApiClient,  context);
 
-public void onMessageReceived(final MessageEvent messageEvent) {  // from MessageListener
-
+public void onMessageReceived(final MessageEvent messageEvent) {  // from MessageListener
+
 }
 
 
