@@ -2,7 +2,7 @@
 
 # Connect
 
-mApiClient = new GoogleApiClient.Builder(this).addApi(Wearable.API).addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
+mApiClient = new GoogleApiClient.Builder(this).addApi(Wearable.API).addConnectionCallbacks(new GoogleApiClient.ConnectionCallbacks() {
  public void onConnected(Bundle bundle) {
   Log.d(TAG, "ConnectionCallback onConnected");
  }
